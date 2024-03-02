@@ -1,7 +1,7 @@
-## Overview
+# Overview
 The **Nadim Database Migration** project focuses on migrating a lawyer office management database using MySQL. Follow the steps below to set up the project and perform seamless database migration.
 
-### Prerequisites
+## Prerequisites
 Before you begin, ensure that you have the following prerequisites installed:
 
 1. **Node.js**: Install Node.js on your system. You can download it from the official website [here](https://nodejs.org/en/download/).
@@ -17,11 +17,20 @@ Follow these steps to get started with the project:
 2. **Project Setup**:
    - Open the project in Visual Studio Code (or any other code editor).
    - In the terminal, run the following commands:
-
+   ***install the Sequelize CLI tool***:
      ```bash
      npm install --save-dev sequelize-cli
+     ```
+   ***initialize thw Sequelize project***:
+     ```bash
      npx sequelize-cli init
+     ```
+   ***install the mysql2 package as a dependency***:
+     ```bash
      npm install mysql2 --save
+     ```
+   ***execute database migrations***:
+     ```bash
      npx sequelize-cli db:migrate
      ```
 
