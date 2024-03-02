@@ -10,11 +10,14 @@ Before you begin, ensure that you have the following prerequisites installed:
 
 ## Getting Started
 Follow these steps to get started with the project:
-
 1. **Create MySQL Database**:
    - Create a MySQL database named "nadim_db" using your preferred MySQL management tool (e.g., phpMyAdmin, MySQL Workbench).
 
 2. **Project Setup**:
+   - Clone this repository to your local machine using this command:
+     ```bash
+     git clone https://github.com/Zakariathr22/NadimDB.git
+     ```
    - Open the project in Visual Studio Code (or any other code editor).
    - In the terminal, run the following commands:
 
@@ -35,5 +38,5 @@ Follow these steps to get started with the project:
      npx sequelize-cli db:migrate
      ```
 
-3. **Schema Visualization**:
+4. **Schema Visualization**:
    - Open DBSchema and connect it to your database for a better schema visualization. You can download DBSchema from [here](https://dbschema.com/download.html).
