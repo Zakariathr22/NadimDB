@@ -1,35 +1,34 @@
 'use strict';
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Person', {
+    await queryInterface.createTable('GroupRelation', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      added_at: {
-        type: Sequelize.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
-      },
-      creator_id: {
+      group_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
-          model: 'User',
+          model: 'GroupHierarchy',
           key: 'id',
         },
       },
-      office_id: {
+      person_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
-          model: 'Office',
+          model: 'Person',
           key: 'id',
         },
+      },
+      relation: {
+        type: Sequelize.STRING(50),
       },
     });
   },
-
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Person');
+    await queryInterface.dropTable('GroupRelation');
   },
 };

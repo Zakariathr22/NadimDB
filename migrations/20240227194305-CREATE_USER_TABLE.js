@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING(10)
       },
       profile_pic: {
-        type: Sequelize.STRING(255)
+        type: Sequelize.BLOB,
       },
       email: {
         type: Sequelize.STRING(100), // Add the email column
