@@ -1,30 +1,30 @@
 'use strict';
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('GroupHierarchy', {
-      id: {
+    await queryInterface.createTable('OfficeCreation', {
+      office_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         primaryKey: true,
-        autoIncrement: true,
-      },
-      parent_group_id: {
-        type: Sequelize.INTEGER,
-        allowNull: true,
         references: {
-          model: 'GroupHierarchy',
+          model: 'office',
           key: 'id',
         },
       },
-      Inheritor: {
+      user_id: {
         type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true,
         references: {
-          model: 'Person',
+          model: 'user',
           key: 'id',
         },
       },
     });
   },
+
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('GroupHierarchy');
+    await queryInterface.dropTable('OfficeCreation');
   },
 };

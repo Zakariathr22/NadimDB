@@ -55,16 +55,6 @@ module.exports = {
         allowNull: false,
         defaultValue: false,
       },
-      creator_id: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: 'User', // Assuming your User table name is 'User'
-          key: 'id',
-        },
-        allowNull: true, // Change to false if creator_id is mandatory
-        onUpdate: 'CASCADE',
-        onDelete: 'SET NULL', // Change to 'CASCADE' or other appropriate action
-      },
     });
   },
 
