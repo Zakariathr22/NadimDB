@@ -25,10 +25,6 @@ Follow these steps to get started with the project:
      ```bash
      npm install --save-dev sequelize-cli
      ```
-   ***initialize thw Sequelize project***:
-     ```bash
-     npx sequelize-cli init
-     ```
    ***install the mysql2 package as a dependency***:
      ```bash
      npm install mysql2 --save

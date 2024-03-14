@@ -43,7 +43,7 @@ module.exports = {
         type: Sequelize.STRING(50),
       },
       court_num_year: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(10),
       },
       index_num: {
         type: Sequelize.STRING(50),

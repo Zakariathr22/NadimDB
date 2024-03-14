@@ -10,7 +10,7 @@ module.exports = {
         allowNull: false,
       },
       naming: {
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       accreditation: {
@@ -18,15 +18,15 @@ module.exports = {
         allowNull: false,
       },
       wilaya: {
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       municipality: {
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       headquarters: {
-        type: Sequelize.STRING(255),
+        type: Sequelize.STRING(50),
         allowNull: false,
       },
       phone1: {
