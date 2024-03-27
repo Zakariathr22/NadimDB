@@ -45,12 +45,12 @@ module.exports = {
         type: Sequelize.STRING(100),
         allowNull: true,
       },
-      created_at: {
+      createdAt: {
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
       },
-      is_company: {
+      isCompany: {
         type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: false,
