@@ -19,7 +19,6 @@ module.exports = {
           key: 'id',
         },
       },
-      // Define any other fields you need for this table
     });
 
     // Add a composite primary key

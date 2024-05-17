@@ -36,21 +36,40 @@ module.exports = {
       office_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'Office', // Assuming your Office table name is 'Office'
+          model: 'Office',
           key: 'id',
         },
         onUpdate: 'CASCADE',
-        onDelete: 'CASCADE', // Adjust as needed (CASCADE, SET NULL, etc.)
+        onDelete: 'CASCADE',
       },
       user_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'User', // Assuming your User table name is 'User'
+          model: 'User',
           key: 'id',
         },
         onUpdate: 'CASCADE',
-        onDelete: 'SET NULL', // Change to 'CASCADE' or other appropriate action
+        onDelete: 'SET NULL',
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      lastUpdate: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      isDeleted: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      deletedAt: {
+        allowNull: true,
+        type: Sequelize.DATE
+      }
     });
   },
 

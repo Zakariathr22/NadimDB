@@ -56,6 +56,20 @@ module.exports = {
           key: 'ID',
         },
       },
+      lastUpdate: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      isDeleted: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      deletedAt: {
+        allowNull: true,
+        type: Sequelize.DATE
+      }
     });
   },
 
@@ -63,5 +77,3 @@ module.exports = {
     await queryInterface.dropTable('Document');
   },
 };
-
-//AuthorsDocumentAssociation

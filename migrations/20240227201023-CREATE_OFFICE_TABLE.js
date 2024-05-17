@@ -10,7 +10,7 @@ module.exports = {
         allowNull: false,
       },
       naming: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(120),
         allowNull: false,
       },
       accreditation: {
@@ -18,15 +18,15 @@ module.exports = {
         allowNull: false,
       },
       wilaya: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(100),
         allowNull: false,
       },
       municipality: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(100),
         allowNull: false,
       },
       headquarters: {
-        type: Sequelize.STRING(50),
+        type: Sequelize.STRING(100),
         allowNull: false,
       },
       phone1: {
@@ -49,6 +49,20 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
         defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'),
+      },
+      lastUpdate: {
+        allowNull: false,
+        type: Sequelize.DATE,
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+      },
+      isDeleted: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      deletedAt: {
+        allowNull: true,
+        type: Sequelize.DATE
       },
       isCompany: {
         type: Sequelize.BOOLEAN,
