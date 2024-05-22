@@ -3,7 +3,7 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.sequelize.query(`
-      CREATE PROCEDURE OldTokenUpdate(
+      CREATE PROCEDURE DeactivateUserTokens(
           IN p_email VARCHAR(255),
           IN p_password VARCHAR(255)
       )
@@ -26,6 +26,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.sequelize.query('DROP PROCEDURE IF EXISTS OldTokenUpdate;');
+    await queryInterface.sequelize.query('DROP PROCEDURE IF EXISTS DeactivateUserTokens;');
   }
 };
