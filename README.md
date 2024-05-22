@@ -21,10 +21,6 @@ Follow these steps to get started with the project:
    - Open the project in Visual Studio Code (or any other code editor).
    - In the terminal, run the following commands:
 
-   ***install the Sequelize CLI tool***:
-     ```bash
-     npm install --save-dev sequelize-cli
-     ```
    ***install the mysql2 package as a dependency***:
      ```bash
      npm install mysql2 --save
