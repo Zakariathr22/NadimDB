@@ -22,7 +22,8 @@ module.exports = {
                IF(L.user_id IS NOT NULL, L.accreditation, 'clerk') AS accreditation,
                IF(L.user_id IS NOT NULL, L.starting_date, U.createdAt) AS starting_date,
                IF(L.user_id IS NOT NULL, U2.firstname, U3.firstname) AS creator_firstname,
-               IF(L.user_id IS NOT NULL, U2.lastname, U3.lastname) AS creator_lastname
+               IF(L.user_id IS NOT NULL, U2.lastname, U3.lastname) AS creator_lastname,
+               IF(L.user_id IS NOT NULL, U2.gender, U3.gender) AS creator_gender
         FROM User U
         LEFT JOIN Lawyer L ON U.id = L.user_id
         LEFT JOIN User U2 ON L.creator_id = U2.id
