@@ -18,7 +18,7 @@ module.exports = {
             SET v_is_token_valid = 0;
         END IF;
     
-        SELECT U.firstname, U.lastname, U.birthdate, U.gender, U.profilePic, U.email, U.phone, U.createdAt, U.lastUpdate, v_is_token_valid AS is_token_valid,
+        SELECT U.firstname, U.lastname, U.birthdate, U.gender, U.profilePic, U.email, U.emailVerified , U.phone, U.phoneVerified, U.salt, U.createdAt, U.lastUpdate, v_is_token_valid AS is_token_valid,
                IF(L.user_id IS NOT NULL, L.accreditation, 'clerk') AS accreditation,
                IF(L.user_id IS NOT NULL, L.starting_date, U.createdAt) AS starting_date,
                IF(L.user_id IS NOT NULL, U2.firstname, U3.firstname) AS creator_firstname,
